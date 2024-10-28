@@ -5,10 +5,11 @@ import './global.css'
 import SignUpForm from './_auth/forms/sign-up-form';
 import AuthLayout from './_auth/auth-layout';
 import RootLayout from './_root/root-layout';
+import { Toaster } from '@/components/ui/toaster';
 
 const App = () => {
   return (
-    <main className="h-screen flex">
+    <main className="h-screen flex">      
       <Routes>
         {/* !!! public routes */}
         <Route element={<AuthLayout  />}>
@@ -21,6 +22,7 @@ const App = () => {
           <Route index element={<Home />}/>
         </Route>
       </Routes>
+      <Toaster />
     </main>
   )
 }
